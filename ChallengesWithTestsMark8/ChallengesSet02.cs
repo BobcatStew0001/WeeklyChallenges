@@ -75,7 +75,24 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Count == 0)
+            {
+                return false;
+            }
+            int sum = 0;
+            foreach (var x in numbers)
+            {
+                sum += x; 
+            }
+
+            if (sum % 2 != 0)
+            {
+                return true; 
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
