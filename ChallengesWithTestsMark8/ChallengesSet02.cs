@@ -65,12 +65,33 @@ namespace ChallengesWithTestsMark8
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+            int sum = 0;
+            foreach (var x in numbers)
+            {
+                sum += x;
+            }
+            return sum;
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+            int sum = 0;
+            foreach (var x in numbers)
+            {
+                sum += x;
+            }
+            return sum;
+
+          
+           
         }
 
         public bool IsSumOdd(List<int> numbers)
