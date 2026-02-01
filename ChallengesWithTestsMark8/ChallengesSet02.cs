@@ -29,12 +29,28 @@ namespace ChallengesWithTestsMark8
 
         public bool IsNumberEven(int number)
         {
-            throw new NotImplementedException();
+            if (number % 2 == 0 && number % -2 == 0)
+            {
+                return  true;
+            }
+            else{return false;}
         }
+        
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            if (num % 1 == 0 && num % -1 == 0)
+            {
+                return true;
+            }
+            if (num ! % 2 == 0 && num % -2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
