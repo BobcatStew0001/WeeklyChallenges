@@ -105,7 +105,7 @@ namespace ChallengesWithTestsMark8
             int sum = 0;
             foreach (var x in numbers)
             {
-                sum += x;
+                sum += (x % 2 ==  0) ? x : 0;
             }
             return sum;
 
