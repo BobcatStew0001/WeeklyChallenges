@@ -53,9 +53,7 @@ namespace ChallengesWithTestsMark8
 
         public string GetHey()
         {
-            Console.WriteLine("What's your name?");
-            var name = Console.ReadLine();
-            return "Hey, " + name;
+            return "HEY!";
         }
     }
 }

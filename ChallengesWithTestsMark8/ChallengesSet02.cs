@@ -7,19 +7,24 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            var letter = c.ToString();
-            if(letter == "a b c d e f w x y z")
+            string alaphabetLower = "abcdefghijklmnopqrstuvwxyz";
+            string alaphabetUpper = alaphabetLower.ToUpper();
+            char[] lowerCaseAlaphabet = alaphabetLower.ToCharArray();
+            char[] upperCaseAlaphabet = alaphabetUpper.ToCharArray();
+            for (int i = 0; i < lowerCaseAlaphabet.Length; i++)
             {
-                return true;
+                if (lowerCaseAlaphabet[i] == c)
+                {
+                    return true;
+                }
+
+                if (upperCaseAlaphabet[i] == c)
+                {
+                    return true;
+                }
             }
-            if(letter == "g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v")
-            {
-                return true; 
-            }
-            else
-            {
-                return false;
-            }
+            return false;
+            
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -106,7 +111,7 @@ namespace ChallengesWithTestsMark8
             foreach (var x in numbers)
             {
                 sum += (x % 2 ==  0) ? x : 0;
-            }
+            } 
             return sum;
 
           
