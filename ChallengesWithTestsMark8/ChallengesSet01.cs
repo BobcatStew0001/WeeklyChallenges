@@ -55,5 +55,15 @@ namespace ChallengesWithTestsMark8
         {
             return "HEY!";
         }
+
+        public static int SumDigits(int number)
+        {
+            int nValue = number;
+            int nAbs = Math.Abs(nValue);
+            return nAbs;
+        }
     }
 }
+
+
+

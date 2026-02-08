@@ -23,8 +23,9 @@ namespace ChallengesWithTestsMark8
                     return true;
                 }
             }
+
             return false;
-            
+
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -36,11 +37,14 @@ namespace ChallengesWithTestsMark8
         {
             if (number % 2 == 0 && number % -2 == 0)
             {
-                return  true;
+                return true;
             }
-            else{return false;}
+            else
+            {
+                return false;
+            }
         }
-        
+
 
         public bool IsNumberOdd(int num)
         {
@@ -48,6 +52,7 @@ namespace ChallengesWithTestsMark8
             {
                 return true;
             }
+
             if (num ! % 2 == 0 && num % -2 == 0)
             {
                 return true;
@@ -62,10 +67,10 @@ namespace ChallengesWithTestsMark8
         {
             if (numbers == null)
             {
-                return 0;   
+                return 0;
             }
 
-            double? min = null; 
+            double? min = null;
             double? max = null;
 
             foreach (var x in numbers)
@@ -78,9 +83,10 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
+
             return min.Value + max.Value;
         }
-        
+
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
@@ -93,11 +99,13 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
+
             int sum = 0;
             foreach (var x in numbers)
             {
                 sum += x;
             }
+
             return sum;
         }
 
@@ -107,15 +115,17 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
+
             int sum = 0;
             foreach (var x in numbers)
             {
-                sum += (x % 2 ==  0) ? x : 0;
-            } 
+                sum += (x % 2 == 0) ? x : 0;
+            }
+
             return sum;
 
-          
-           
+
+
         }
 
         public bool IsSumOdd(List<int> numbers)
@@ -124,15 +134,16 @@ namespace ChallengesWithTestsMark8
             {
                 return false;
             }
+
             int sum = 0;
             foreach (var x in numbers)
             {
-                sum += x; 
+                sum += x;
             }
 
             if (sum % 2 != 0)
             {
-                return true; 
+                return true;
             }
             else
             {
@@ -142,7 +153,11 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            if (number <= 0)
+            {
+                return 0;
+            }
+            return number / 2;
         }
     }
 }
