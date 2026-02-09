@@ -48,21 +48,9 @@ namespace ChallengesWithTestsMark8
 
         public bool IsNumberOdd(int num)
         {
-            if (num % 1 == 0 && num % -1 == 0)
-            {
-                return true;
-            }
-
-            if (num ! % 2 == 0 && num % -2 == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return num % 2 != 0;
         }
-
+            
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
             if (numbers == null)
