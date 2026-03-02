@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq; //Added this because it was recommended by the AI as an easier way. 
 
 namespace ChallengesWithTestsMark8
 {
@@ -20,7 +21,7 @@ namespace ChallengesWithTestsMark8
             return false;
         }
 
-        public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
+        public bool IsSumOfOddsOdd(IEnumerable<int> numbers) 
         {
             if (numbers == null) return false;
 
@@ -32,22 +33,26 @@ namespace ChallengesWithTestsMark8
             }
             return (oddCount & 1) != 0;
             
-            
+            // Why does the if null statement have to come in the beginning? I had my foreach first and could not get 
+            // the code to pass correctly. Shouldn't it run through the foreach and if the test doesn't meet the scope 
+            //filter to the if statement?
         }
 
-        public bool PasswordContainsUpperLowerAndNumber(string password)
+        public bool PasswordContainsUpperLowerAndNumber(string password)//Used the Linq here. 
         {
-            throw new NotImplementedException();
+            return password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsNumber);
         }
+        //In a situation like this should I put it on three seperate lines for better readability or keep it on one line
+        
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[0];
         }
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[val.Length - 1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
@@ -62,8 +67,10 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+         return nums[nums.Length - 1] -  nums[0];
         }
+        //Why can you say nums[nums.Length-1]-nums[0] but not nums[0]-nums[nums.Length-1]? The 2nd way kept 
+        //throwing an error saying the (-) couldn't be applied. 
 
         public int[] GetOddsBelow100()
         {
@@ -79,7 +86,11 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            for(int i =0;i<words.Length;i++)
+            {
+                words[i] = words[i].ToUpper();
+            }//why can you not just apply the ToUpper() directly to the string[] by saying string[string.ToUpper()]?
         }
+        
     }
 }
